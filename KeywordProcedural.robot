@@ -1,7 +1,7 @@
 *** Settings ***
-Library     RequestsLibrary    # pip install robotframework-requests
-Library     FakerLibrary       # pip install robotframework-faker
-Library     String
+Library    RequestsLibrary    # pip install robotframework-requests
+Library    FakerLibrary       # pip install robotframework-faker
+Library    String
 Library    Collections
 
 *** Keywords ***
@@ -74,6 +74,6 @@ Verificando Login Incorreto
     ...            url=/usuarios/${aleatorio}
     ...            expected_status=400
     
-    Dictionary Should Contain Item    ${VerificandoLoginCorreto.json()}    message                Usuário não encontrado
+    Dictionary Should Contain Item    ${VerificandoLoginCorreto.json()}    message    Usuário não encontrado
 
     Log   ${\n}${VerificandoLoginCorreto.json()}
